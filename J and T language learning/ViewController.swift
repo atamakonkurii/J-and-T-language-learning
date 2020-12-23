@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
     
@@ -17,6 +18,9 @@ class ViewController: UIViewController {
     var number = 1 //文章の通し番号
     var tapCondition = 0 //0:？を表示,1:文章を表示
     var csvLines = [String]() //csvファイルを行ごとに分割
+    
+    var audioPlayer: AVAudioPlayer!
+
     
 
     override func viewDidLoad() {
@@ -40,8 +44,11 @@ class ViewController: UIViewController {
             return
         }
         
+                
+        
         //ボタンが押されるまで初期の表示になっていたため、表示する関数を置いて最初の文章を表示するように変更
         hyouzi(condition: tapCondition)
+        playSound(name: "sound/soundJapanese/\(number)_J.m4a")
     }
     
     //ボタンが押されたらカウントアップする
@@ -50,6 +57,7 @@ class ViewController: UIViewController {
         number = number + 1
         tapCondition = 0
         hyouzi(condition: tapCondition)
+        playSound(name: "sound/soundJapanese/\(number)_J.m4a")
     }
     
     
@@ -65,10 +73,12 @@ class ViewController: UIViewController {
             tapCondition = 0
         }
         hyouzi(condition: tapCondition)
+        playSound(name: "sound/soundJapanese/\(number)_J.m4a")
     }
     
     //透明ボタンを押した時のアクション
     @IBAction func hide_upper(_ sender: UIButton) {
+        playSound(name: "sound/soundJapanese/\(number)_J.m4a")
         hyouzi(condition: tapCondition)
     }
     
@@ -104,4 +114,37 @@ class ViewController: UIViewController {
         }
     }
     
+}
+
+extension ViewController: AVAudioPlayerDelegate {
+    func playSound(name: String) {
+        let soundPath = name.split(separator: ".").map { String($0) }
+        if !isValidSoundPath(soundPath) {
+            print("音源ファイル名が無効です。")
+            return
+        }
+
+        guard let path = Bundle.main.path(forResource: soundPath[0], ofType: soundPath[1]) else {
+            print("音源ファイルが見つかりません")
+            return
+        }
+
+        do {
+            // AVAudioPlayerのインスタンス化
+            audioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: path))
+
+            // AVAudioPlayerのデリゲートをセット
+            audioPlayer.delegate = self
+
+            // 音声の再生
+            audioPlayer.play()
+        } catch {
+        }
+    }
+
+    func isValidSoundPath(_ soundPath: [String]) -> Bool {
+        // ここは目的とか状況によって柔軟に。
+        // たとえば拡張子によって判定するとか
+        return soundPath.count == 2
+    }
 }
