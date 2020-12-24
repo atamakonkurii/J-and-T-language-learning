@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     
     var number = 1 //文章の通し番号
     var tapCondition = 0 //0:？を表示,1:文章を表示
+    var chLangFlag = 0 //0:日本語 1:台湾中国語
     var csvLines = [String]() //csvファイルを行ごとに分割
     
     var audioPlayer: AVAudioPlayer!
@@ -57,7 +58,7 @@ class ViewController: UIViewController {
         number = number + 1
         tapCondition = 0
         hyouzi(condition: tapCondition)
-        playSound(name: "sound/soundJapanese/\(number)_J.m4a")
+        playSoundUpper()
     }
     
     
@@ -73,13 +74,13 @@ class ViewController: UIViewController {
             tapCondition = 0
         }
         hyouzi(condition: tapCondition)
-        playSound(name: "sound/soundJapanese/\(number)_J.m4a")
+        playSoundUpper()
     }
     
     //透明ボタンを押した時のアクション
     @IBAction func hide_upper(_ sender: UIButton) {
-        playSound(name: "sound/soundJapanese/\(number)_J.m4a")
         hyouzi(condition: tapCondition)
+        playSoundUpper()
     }
     
     
@@ -87,8 +88,22 @@ class ViewController: UIViewController {
     @IBAction func hide_under(_ sender: UIButton){
         tapCondition = 1
         hyouzi(condition: tapCondition)
+        playSoundLower()
     }
     
+    
+    @IBAction func changeLanguage(_ sender: UIButton) {
+        if chLangFlag == 0 {
+            chLangFlag = 1
+        } else {
+            chLangFlag = 0
+        }
+        
+        tapCondition = 0
+        
+        hyouzi(condition: tapCondition)
+        playSoundUpper()
+    }
     
     //文章を表示
     func hyouzi(condition: Int) {
@@ -100,17 +115,58 @@ class ViewController: UIViewController {
         //csvの行から要素に分割
         let sentenceDetail = csvLines[number].components(separatedBy: ",")
         
-        Japanese.text = "\(sentenceDetail[1])"
-        hurigana.text = "\(sentenceDetail[2])"
-        
-        if condition < 1 {
-            //タップされていないときは？を出力
-            Taiwanese.text = "?"
-            bopomofo.text = ""
+        //chLangFlagの状態を見て上に表示する言語を切り替える
+        if chLangFlag == 0{
+            
+            Japanese.text = "\(sentenceDetail[1])"
+            hurigana.text = "\(sentenceDetail[2])"
+            
+            if condition < 1 {
+                //タップされていないときは？を出力
+                Taiwanese.text = "?"
+                bopomofo.text = ""
+            } else {
+                //タップされたら文章を出力
+                Taiwanese.text = "\(sentenceDetail[3])"
+                bopomofo.text = "\(sentenceDetail[4])"
+            }
+            
         } else {
-            //タップされたら文章を出力
-            Taiwanese.text = "\(sentenceDetail[3])"
-            bopomofo.text = "\(sentenceDetail[4])"
+            
+            Japanese.text = "\(sentenceDetail[3])"
+            hurigana.text = "\(sentenceDetail[4])"
+            
+            if condition < 1 {
+                //タップされていないときは？を出力
+                Taiwanese.text = "?"
+                bopomofo.text = ""
+            } else {
+                //タップされたら文章を出力
+                Taiwanese.text = "\(sentenceDetail[1])"
+                bopomofo.text = "\(sentenceDetail[2])"
+            }
+        }
+        
+        
+    }
+    
+    //上側の文章を再生
+    func playSoundUpper() {
+        
+        if chLangFlag == 0 {
+            playSound(name: "sound/soundJapanese/\(number)_J.m4a")
+        } else {
+            playSound(name: "sound/soundTaiwanese/\(number)_J.m4a")
+        }
+    }
+    
+    //下側の文章を再生
+    func playSoundLower() {
+        
+        if chLangFlag == 0 {
+            playSound(name: "sound/soundTaiwanese/\(number)_J.m4a")
+        } else {
+            playSound(name: "sound/soundJapanese/\(number)_J.m4a")
         }
     }
     
