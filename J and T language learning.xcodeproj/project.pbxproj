@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D51B4C1725C02E0E00D3A261 /* sentence in Resources */ = {isa = PBXBuildFile; fileRef = D51B4C1625C02E0E00D3A261 /* sentence */; };
 		D52F9EAC259317D200D4892D /* sound in Resources */ = {isa = PBXBuildFile; fileRef = D52F9EAB259317D200D4892D /* sound */; };
 		D5D545C3259192CB003EB524 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D545C2259192CB003EB524 /* AppDelegate.swift */; };
 		D5D545C5259192CB003EB524 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D545C4259192CB003EB524 /* SceneDelegate.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D51B4C1625C02E0E00D3A261 /* sentence */ = {isa = PBXFileReference; lastKnownFileType = folder; name = sentence; path = ../../../sentence; sourceTree = "<group>"; };
 		D52F9EAB259317D200D4892D /* sound */ = {isa = PBXFileReference; lastKnownFileType = folder; name = sound; path = ../../../sound; sourceTree = "<group>"; };
 		D5D545BF259192CB003EB524 /* J and T language learning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "J and T language learning.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5D545C2259192CB003EB524 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 				D5D545C6259192CB003EB524 /* ViewController.swift */,
 				D5D545C8259192CB003EB524 /* Main.storyboard */,
 				D5D545DF2591A079003EB524 /* sentence.csv */,
+				D51B4C1625C02E0E00D3A261 /* sentence */,
 				D5D545CB259192CC003EB524 /* Assets.xcassets */,
 				D52F9EAB259317D200D4892D /* sound */,
 				D5D545CD259192CC003EB524 /* LaunchScreen.storyboard */,
@@ -135,6 +138,7 @@
 				D5D545CA259192CB003EB524 /* Main.storyboard in Resources */,
 				D52F9EAC259317D200D4892D /* sound in Resources */,
 				D5D545E02591A079003EB524 /* sentence.csv in Resources */,
+				D51B4C1725C02E0E00D3A261 /* sentence in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
