@@ -29,7 +29,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         //csvファイルの読み込み
-        guard let path = Bundle.main.path(forResource:"sentence", ofType:"csv") else {
+        guard let path = Bundle.main.path(forResource:"sentence/sentence", ofType:"csv") else {
             print("csvファイルがないよ")
             return
         }
@@ -56,7 +56,14 @@ class ViewController: UIViewController {
     @IBAction func Next(_ sender: Any) {
         //countupをして次の文章に送る
         number = number + 1
-        tapCondition = 0
+        
+        //通し番号が配列の最大値の時の状態で進むボタンを押した時に？に戻る現象の応急処置
+        if number > (csvLines.count - 1) && tapCondition == 1 {
+            tapCondition = 1
+        } else {
+            tapCondition = 0
+        }
+
         hyouzi(condition: tapCondition)
         playSoundUpper()
     }
@@ -111,8 +118,11 @@ class ViewController: UIViewController {
         //範囲外の配列を受け付けないように設定
         if number < 1 {
             number = 1
+        }else if number > (csvLines.count - 1){
+            number = csvLines.count - 1
         }
         //csvの行から要素に分割
+        
         let sentenceDetail = csvLines[number].components(separatedBy: ",")
         
         //chLangFlagの状態を見て上に表示する言語を切り替える
@@ -153,20 +163,24 @@ class ViewController: UIViewController {
     //上側の文章を再生
     func playSoundUpper() {
         
+        let soundNum: String = String(format: "%04d", number)
+        
         if chLangFlag == 0 {
-            playSound(name: "sound/soundJapanese/\(number)_J.m4a")
+            playSound(name: "sound/soundChangeProgram/soundJapanese/wav_cut/J_\(soundNum).wav")
         } else {
-            playSound(name: "sound/soundTaiwanese/\(number)_J.m4a")
+            playSound(name: "sound/soundChangeProgram/soundTaiwanese/wav_cut/T_\(soundNum).wav")
         }
     }
     
     //下側の文章を再生
     func playSoundLower() {
         
+        let soundNum: String = String(format: "%04d", number)
+        
         if chLangFlag == 0 {
-            playSound(name: "sound/soundTaiwanese/\(number)_J.m4a")
+            playSound(name: "sound/soundChangeProgram/soundTaiwanese/wav_cut/T_\(soundNum).wav")
         } else {
-            playSound(name: "sound/soundJapanese/\(number)_J.m4a")
+            playSound(name: "sound/soundChangeProgram/soundJapanese/wav_cut/J_\(soundNum).wav")
         }
     }
     
