@@ -9,18 +9,23 @@
 /* Begin PBXBuildFile section */
 		D51B4C1725C02E0E00D3A261 /* sentence in Resources */ = {isa = PBXBuildFile; fileRef = D51B4C1625C02E0E00D3A261 /* sentence */; };
 		D52F9EAC259317D200D4892D /* sound in Resources */ = {isa = PBXBuildFile; fileRef = D52F9EAB259317D200D4892D /* sound */; };
+		D55262BB25C29F6100053CC5 /* picture in Resources */ = {isa = PBXBuildFile; fileRef = D55262BA25C29F6100053CC5 /* picture */; };
+		D55262BE25C2CF7800053CC5 /* ViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55262BD25C2CF7800053CC5 /* ViewController1.swift */; };
 		D5D545C3259192CB003EB524 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D545C2259192CB003EB524 /* AppDelegate.swift */; };
 		D5D545C5259192CB003EB524 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D545C4259192CB003EB524 /* SceneDelegate.swift */; };
 		D5D545C7259192CB003EB524 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D545C6259192CB003EB524 /* ViewController.swift */; };
 		D5D545CA259192CB003EB524 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5D545C8259192CB003EB524 /* Main.storyboard */; };
 		D5D545CC259192CC003EB524 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5D545CB259192CC003EB524 /* Assets.xcassets */; };
 		D5D545CF259192CC003EB524 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5D545CD259192CC003EB524 /* LaunchScreen.storyboard */; };
-		D5D545E02591A079003EB524 /* sentence.csv in Resources */ = {isa = PBXBuildFile; fileRef = D5D545DF2591A079003EB524 /* sentence.csv */; };
+		D5DAB87925C360770029F8C5 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DAB87825C360770029F8C5 /* ViewController2.swift */; };
+		D5DAB87E25C36C3D0029F8C5 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DAB87D25C36C3D0029F8C5 /* TableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D51B4C1625C02E0E00D3A261 /* sentence */ = {isa = PBXFileReference; lastKnownFileType = folder; name = sentence; path = ../../../sentence; sourceTree = "<group>"; };
 		D52F9EAB259317D200D4892D /* sound */ = {isa = PBXFileReference; lastKnownFileType = folder; name = sound; path = ../../../sound; sourceTree = "<group>"; };
+		D55262BA25C29F6100053CC5 /* picture */ = {isa = PBXFileReference; lastKnownFileType = folder; name = picture; path = ../../../picture; sourceTree = "<group>"; };
+		D55262BD25C2CF7800053CC5 /* ViewController1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController1.swift; sourceTree = "<group>"; };
 		D5D545BF259192CB003EB524 /* J and T language learning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "J and T language learning.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5D545C2259192CB003EB524 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D5D545C4259192CB003EB524 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -29,7 +34,8 @@
 		D5D545CB259192CC003EB524 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D5D545CE259192CC003EB524 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D5D545D0259192CC003EB524 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D5D545DF2591A079003EB524 /* sentence.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sentence.csv; sourceTree = "<group>"; };
+		D5DAB87825C360770029F8C5 /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
+		D5DAB87D25C36C3D0029F8C5 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,11 +72,14 @@
 				D5D545C4259192CB003EB524 /* SceneDelegate.swift */,
 				D5D545C6259192CB003EB524 /* ViewController.swift */,
 				D5D545C8259192CB003EB524 /* Main.storyboard */,
-				D5D545DF2591A079003EB524 /* sentence.csv */,
+				D5DAB87D25C36C3D0029F8C5 /* TableViewController.swift */,
+				D55262BD25C2CF7800053CC5 /* ViewController1.swift */,
+				D5DAB87825C360770029F8C5 /* ViewController2.swift */,
 				D51B4C1625C02E0E00D3A261 /* sentence */,
 				D5D545CB259192CC003EB524 /* Assets.xcassets */,
 				D52F9EAB259317D200D4892D /* sound */,
 				D5D545CD259192CC003EB524 /* LaunchScreen.storyboard */,
+				D55262BA25C29F6100053CC5 /* picture */,
 				D5D545D0259192CC003EB524 /* Info.plist */,
 			);
 			path = "J and T language learning";
@@ -136,8 +145,8 @@
 				D5D545CF259192CC003EB524 /* LaunchScreen.storyboard in Resources */,
 				D5D545CC259192CC003EB524 /* Assets.xcassets in Resources */,
 				D5D545CA259192CB003EB524 /* Main.storyboard in Resources */,
+				D55262BB25C29F6100053CC5 /* picture in Resources */,
 				D52F9EAC259317D200D4892D /* sound in Resources */,
-				D5D545E02591A079003EB524 /* sentence.csv in Resources */,
 				D51B4C1725C02E0E00D3A261 /* sentence in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -149,6 +158,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5DAB87925C360770029F8C5 /* ViewController2.swift in Sources */,
+				D5DAB87E25C36C3D0029F8C5 /* TableViewController.swift in Sources */,
+				D55262BE25C2CF7800053CC5 /* ViewController1.swift in Sources */,
 				D5D545C7259192CB003EB524 /* ViewController.swift in Sources */,
 				D5D545C3259192CB003EB524 /* AppDelegate.swift in Sources */,
 				D5D545C5259192CB003EB524 /* SceneDelegate.swift in Sources */,

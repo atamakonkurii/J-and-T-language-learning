@@ -15,18 +15,21 @@ class ViewController: UIViewController {
     @IBOutlet var Taiwanese: UILabel!
     @IBOutlet var bopomofo: UILabel!
     
+    
     var number = 1 //文章の通し番号
     var tapCondition = 0 //0:？を表示,1:文章を表示
     var chLangFlag = 0 //0:日本語 1:台湾中国語
     var csvLines = [String]() //csvファイルを行ごとに分割
     
     var audioPlayer: AVAudioPlayer!
+    
 
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+    
         
         //csvファイルの読み込み
         guard let path = Bundle.main.path(forResource:"sentence/sentence", ofType:"csv") else {
