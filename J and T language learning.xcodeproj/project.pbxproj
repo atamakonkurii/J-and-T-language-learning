@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D500A5EE25DC6A4D009AEA41 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = D500A5ED25DC6A4D009AEA41 /* index.html */; };
+		D500A5F325DC6AF3009AEA41 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = D500A5F225DC6AF3009AEA41 /* index.html */; };
 		D51B4C1725C02E0E00D3A261 /* sentence in Resources */ = {isa = PBXBuildFile; fileRef = D51B4C1625C02E0E00D3A261 /* sentence */; };
 		D52F9EAC259317D200D4892D /* sound in Resources */ = {isa = PBXBuildFile; fileRef = D52F9EAB259317D200D4892D /* sound */; };
 		D55262BB25C29F6100053CC5 /* picture in Resources */ = {isa = PBXBuildFile; fileRef = D55262BA25C29F6100053CC5 /* picture */; };
@@ -23,7 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		D500A5ED25DC6A4D009AEA41 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
+		D500A5F225DC6AF3009AEA41 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		D51B4C1625C02E0E00D3A261 /* sentence */ = {isa = PBXFileReference; lastKnownFileType = folder; name = sentence; path = ../../../sentence; sourceTree = "<group>"; };
 		D52F9EAB259317D200D4892D /* sound */ = {isa = PBXFileReference; lastKnownFileType = folder; name = sound; path = ../../../sound; sourceTree = "<group>"; };
 		D55262BA25C29F6100053CC5 /* picture */ = {isa = PBXFileReference; lastKnownFileType = folder; name = picture; path = ../../../picture; sourceTree = "<group>"; };
@@ -51,10 +51,10 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		D599E98E25DB332A006C3B3A /* docs */ = {
+		D500A5F125DC6AF3009AEA41 /* docs */ = {
 			isa = PBXGroup;
 			children = (
-				D500A5ED25DC6A4D009AEA41 /* index.html */,
+				D500A5F225DC6AF3009AEA41 /* index.html */,
 			);
 			path = docs;
 			sourceTree = "<group>";
@@ -62,7 +62,7 @@
 		D5D545B6259192CB003EB524 = {
 			isa = PBXGroup;
 			children = (
-				D599E98E25DB332A006C3B3A /* docs */,
+				D500A5F125DC6AF3009AEA41 /* docs */,
 				D5D545C1259192CB003EB524 /* J and T language learning */,
 				D5D545C0259192CB003EB524 /* Products */,
 			);
@@ -153,7 +153,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D500A5EE25DC6A4D009AEA41 /* index.html in Resources */,
+				D500A5F325DC6AF3009AEA41 /* index.html in Resources */,
 				D5D545CF259192CC003EB524 /* LaunchScreen.storyboard in Resources */,
 				D5D545CC259192CC003EB524 /* Assets.xcassets in Resources */,
 				D5D545CA259192CB003EB524 /* Main.storyboard in Resources */,
