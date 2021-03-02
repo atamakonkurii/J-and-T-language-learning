@@ -11,11 +11,11 @@
 		D51B4C1725C02E0E00D3A261 /* sentence in Resources */ = {isa = PBXBuildFile; fileRef = D51B4C1625C02E0E00D3A261 /* sentence */; };
 		D52F9EAC259317D200D4892D /* sound in Resources */ = {isa = PBXBuildFile; fileRef = D52F9EAB259317D200D4892D /* sound */; };
 		D55262BB25C29F6100053CC5 /* picture in Resources */ = {isa = PBXBuildFile; fileRef = D55262BA25C29F6100053CC5 /* picture */; };
+		D5BB8C6325EEE41B00851816 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5BB8C6225EEE41B00851816 /* Assets.xcassets */; };
 		D5D545C3259192CB003EB524 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D545C2259192CB003EB524 /* AppDelegate.swift */; };
 		D5D545C5259192CB003EB524 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D545C4259192CB003EB524 /* SceneDelegate.swift */; };
 		D5D545C7259192CB003EB524 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D545C6259192CB003EB524 /* ViewController.swift */; };
 		D5D545CA259192CB003EB524 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5D545C8259192CB003EB524 /* Main.storyboard */; };
-		D5D545CC259192CC003EB524 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5D545CB259192CC003EB524 /* Assets.xcassets */; };
 		D5D545CF259192CC003EB524 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5D545CD259192CC003EB524 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -24,12 +24,12 @@
 		D51B4C1625C02E0E00D3A261 /* sentence */ = {isa = PBXFileReference; lastKnownFileType = folder; name = sentence; path = ../../../sentence; sourceTree = "<group>"; };
 		D52F9EAB259317D200D4892D /* sound */ = {isa = PBXFileReference; lastKnownFileType = folder; name = sound; path = ../../../sound; sourceTree = "<group>"; };
 		D55262BA25C29F6100053CC5 /* picture */ = {isa = PBXFileReference; lastKnownFileType = folder; name = picture; path = ../../../picture; sourceTree = "<group>"; };
+		D5BB8C6225EEE41B00851816 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D5D545BF259192CB003EB524 /* J and T language learning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "J and T language learning.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5D545C2259192CB003EB524 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D5D545C4259192CB003EB524 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		D5D545C6259192CB003EB524 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D5D545C9259192CB003EB524 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		D5D545CB259192CC003EB524 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D5D545CE259192CC003EB524 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D5D545D0259192CC003EB524 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -53,6 +53,32 @@
 			path = docs;
 			sourceTree = "<group>";
 		};
+		D5BB8C4F25EEDAE300851816 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D5BB8C5025EEDAF300851816 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D5D545C8259192CB003EB524 /* Main.storyboard */,
+				D5D545CD259192CC003EB524 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D5BB8C5225EEDB3200851816 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D5D545C2259192CB003EB524 /* AppDelegate.swift */,
+				D5D545C4259192CB003EB524 /* SceneDelegate.swift */,
+				D5D545C6259192CB003EB524 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		D5D545B6259192CB003EB524 = {
 			isa = PBXGroup;
 			children = (
@@ -73,14 +99,12 @@
 		D5D545C1259192CB003EB524 /* J and T language learning */ = {
 			isa = PBXGroup;
 			children = (
-				D5D545C2259192CB003EB524 /* AppDelegate.swift */,
-				D5D545C4259192CB003EB524 /* SceneDelegate.swift */,
-				D5D545C6259192CB003EB524 /* ViewController.swift */,
-				D5D545C8259192CB003EB524 /* Main.storyboard */,
+				D5BB8C6225EEE41B00851816 /* Assets.xcassets */,
+				D5BB8C4F25EEDAE300851816 /* Model */,
+				D5BB8C5025EEDAF300851816 /* View */,
+				D5BB8C5225EEDB3200851816 /* Controller */,
 				D51B4C1625C02E0E00D3A261 /* sentence */,
-				D5D545CB259192CC003EB524 /* Assets.xcassets */,
 				D52F9EAB259317D200D4892D /* sound */,
-				D5D545CD259192CC003EB524 /* LaunchScreen.storyboard */,
 				D55262BA25C29F6100053CC5 /* picture */,
 				D5D545D0259192CC003EB524 /* Info.plist */,
 			);
@@ -146,9 +170,9 @@
 			files = (
 				D500A5F325DC6AF3009AEA41 /* index.html in Resources */,
 				D5D545CF259192CC003EB524 /* LaunchScreen.storyboard in Resources */,
-				D5D545CC259192CC003EB524 /* Assets.xcassets in Resources */,
 				D5D545CA259192CB003EB524 /* Main.storyboard in Resources */,
 				D55262BB25C29F6100053CC5 /* picture in Resources */,
+				D5BB8C6325EEE41B00851816 /* Assets.xcassets in Resources */,
 				D52F9EAC259317D200D4892D /* sound in Resources */,
 				D51B4C1725C02E0E00D3A261 /* sentence in Resources */,
 			);
@@ -311,15 +335,17 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B639H858FS;
 				INFOPLIST_FILE = "J and T language learning/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kazukiohta.J-and-T-language-learning";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -329,15 +355,17 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B639H858FS;
 				INFOPLIST_FILE = "J and T language learning/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kazukiohta.J-and-T-language-learning";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

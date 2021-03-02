@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet var hurigana: UILabel!
     @IBOutlet var Taiwanese: UILabel!
     @IBOutlet var bopomofo: UILabel!
+    @IBOutlet weak var changeLangageButton: UIButton!
     
     
     var number = 1 //文章の通し番号
@@ -22,6 +23,9 @@ class ViewController: UIViewController {
     var csvLines = [String]() //csvファイルを行ごとに分割
     
     var audioPlayer: AVAudioPlayer!
+    
+    let japanImage = UIImage(named: "flag1")
+    let taiwanImage = UIImage(named: "flag2")
     
 
     
@@ -103,10 +107,19 @@ class ViewController: UIViewController {
     
     
     @IBAction func changeLanguage(_ sender: UIButton) {
+        
         if chLangFlag == 0 {
+            
+            //台湾語へ切り替え
+            changeLangageButton.setImage(taiwanImage, for: .normal)
             chLangFlag = 1
+            
         } else {
+            
+            //日本語へ切り替え
+            changeLangageButton.setImage(japanImage, for: .normal)
             chLangFlag = 0
+            
         }
         
         tapCondition = 0
@@ -137,10 +150,12 @@ class ViewController: UIViewController {
             if condition < 1 {
                 //タップされていないときは？を出力
                 Taiwanese.text = "?"
+                Taiwanese.textAlignment = NSTextAlignment.center
                 bopomofo.text = ""
             } else {
                 //タップされたら文章を出力
                 Taiwanese.text = "\(sentenceDetail[3])"
+                Taiwanese.textAlignment = NSTextAlignment.left
                 bopomofo.text = "\(sentenceDetail[4])"
             }
             
@@ -152,10 +167,12 @@ class ViewController: UIViewController {
             if condition < 1 {
                 //タップされていないときは？を出力
                 Taiwanese.text = "?"
+                Taiwanese.textAlignment = NSTextAlignment.center
                 bopomofo.text = ""
             } else {
                 //タップされたら文章を出力
                 Taiwanese.text = "\(sentenceDetail[1])"
+                Taiwanese.textAlignment = NSTextAlignment.left
                 bopomofo.text = "\(sentenceDetail[2])"
             }
         }

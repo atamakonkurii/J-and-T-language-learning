@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Japanese" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="kpe-0a-xbX">
-                                <rect key="frame" x="20" y="213" width="374" height="120"/>
+                                <rect key="frame" x="20" y="204" width="374" height="120"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120" id="ZKK-fa-Ra5"/>
                                 </constraints>
@@ -26,7 +26,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Taiwanese" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gBC-n1-I0S">
-                                <rect key="frame" x="20" y="483" width="374" height="120"/>
+                                <rect key="frame" x="20" y="474" width="374" height="120"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120" id="Ehv-r5-KLB"/>
                                 </constraints>
@@ -35,7 +35,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="bopomofo" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oX5-Ei-34W">
-                                <rect key="frame" x="20" y="633" width="374" height="50"/>
+                                <rect key="frame" x="20" y="624" width="374" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Sb4-zU-dAu"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="cSX-Xk-g4r"/>
@@ -44,22 +44,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d4x-r4-cgt">
-                                <rect key="frame" x="45" y="433" width="34" height="30"/>
-                                <state key="normal" title="back"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d4x-r4-cgt">
+                                <rect key="frame" x="43" y="428" width="40" height="40"/>
+                                <state key="normal" image="左向きの矢印のアイコン素材"/>
                                 <connections>
                                     <action selector="Back:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aYY-6b-ZLe"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zXY-Ph-4Lc">
-                                <rect key="frame" x="336" y="433" width="32" height="30"/>
-                                <state key="normal" title="Next"/>
-                                <connections>
-                                    <action selector="Next:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mGg-Ec-hel"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ww9-8y-RfX">
-                                <rect key="frame" x="20" y="483" width="374" height="120"/>
+                                <rect key="frame" x="20" y="474" width="374" height="120"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120" id="t1o-Kv-Jpr"/>
                                 </constraints>
@@ -67,15 +60,19 @@
                                     <action selector="hide_under:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Ie-L4-z3E"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2XJ-gw-fTE">
-                                <rect key="frame" x="364" y="64" width="30" height="30"/>
-                                <state key="normal" title="lang"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2XJ-gw-fTE">
+                                <rect key="frame" x="344" y="64" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="FYF-6x-ByH"/>
+                                    <constraint firstAttribute="height" constant="50" id="Jit-UL-a7A"/>
+                                </constraints>
+                                <state key="normal" image="flag1.png"/>
                                 <connections>
                                     <action selector="changeLanguage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ico-4H-NQW"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hurigana" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aaF-8M-qKn">
-                                <rect key="frame" x="20" y="363" width="374" height="50"/>
+                                <rect key="frame" x="20" y="354" width="374" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="GOJ-pB-YQU"/>
                                 </constraints>
@@ -84,13 +81,20 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="blK-hX-Rf9">
-                                <rect key="frame" x="20" y="213" width="374" height="120"/>
+                                <rect key="frame" x="20" y="204" width="374" height="120"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120" id="Tf2-Gi-JMo"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <connections>
                                     <action selector="hide_upper:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nud-Oa-OFN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zXY-Ph-4Lc">
+                                <rect key="frame" x="331" y="428" width="40" height="40"/>
+                                <state key="normal" image="右向きの矢印のアイコン素材"/>
+                                <connections>
+                                    <action selector="Next:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mGg-Ec-hel"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -129,6 +133,7 @@
                         <outlet property="Japanese" destination="kpe-0a-xbX" id="PdY-ot-boJ"/>
                         <outlet property="Taiwanese" destination="gBC-n1-I0S" id="WDs-WR-Otf"/>
                         <outlet property="bopomofo" destination="oX5-Ei-34W" id="KgE-yJ-34j"/>
+                        <outlet property="changeLangageButton" destination="2XJ-gw-fTE" id="FCv-CH-WI7"/>
                         <outlet property="hurigana" destination="aaF-8M-qKn" id="jna-50-wk3"/>
                     </connections>
                 </viewController>
@@ -158,20 +163,23 @@
                                     <constraint firstAttribute="width" constant="240" id="jFl-Iy-5jC"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J62-Cq-Lp4">
-                                <rect key="frame" x="179" y="556" width="56" height="45"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                <state key="normal" title="Start"/>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="xzh-6R-iVF"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Atama Concrete" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5gD-s8-1gm">
                                 <rect key="frame" x="54.5" y="408" width="305" height="80"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="50"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="highlightedColor" systemColor="labelColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J62-Cq-Lp4">
+                                <rect key="frame" x="167" y="556" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="1ef-wT-l87"/>
+                                    <constraint firstAttribute="width" constant="80" id="pLC-zQ-IdJ"/>
+                                </constraints>
+                                <state key="normal" image="Start"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="xzh-6R-iVF"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="s74-FI-V4u"/>
                         <color key="backgroundColor" red="0.64305299520000003" green="0.88863199950000005" blue="0.84324938059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -194,7 +202,11 @@
     </scenes>
     <resources>
         <image name="Atama concrete" width="132.5" height="138.5"/>
+        <image name="Start" width="2771" height="2512"/>
         <image name="concrete" width="512" height="512"/>
+        <image name="flag1.png" width="500" height="500"/>
+        <image name="右向きの矢印のアイコン素材" width="48" height="48"/>
+        <image name="左向きの矢印のアイコン素材" width="48" height="48"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
